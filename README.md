@@ -5,6 +5,9 @@
 
 本頁為謎之輸入法（mizu input，HarmonyOS）的公開隱私政策，供應用市場審核與使用者參閱。
 
+## 下載檔案 Downloads
+- [`downloads/ja_words_full.txt`](downloads/ja_words_full.txt) — 完整版日文詞庫（16.2 萬讀音，生成自 JMdict，見主專案 `THIRD_PARTY_LICENSES.md`）。於 App 主程式「日文詞庫」下載並匯入即可使用。
+
 ---
 
 ## 繁體中文
