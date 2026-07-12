@@ -29,11 +29,15 @@
 - **最近使用的表情符號**：Emoji 面板會在本機記錄最近使用的表情（上限 24 筆）。
 - **匯入的碼表／詞庫**：您自行匯入的形碼碼表檔、日文完整版詞庫，僅存於本機供輸入使用。
 - **鍵盤底圖**：您從相簿選擇的鍵盤背景圖片，僅複製一份存於本機供顯示使用。
+- **備份檔案**：您於「備份與還原」主動匯出的設定與學習資料備份檔（JSON），內容與上述本機資料相同，儲存於您指定的裝置位置；本輸入法不會自動上傳或分享此檔案，匯入時也僅在您主動選擇檔案後才讀取。
 
 ### 權限說明
 - **震動（ohos.permission.VIBRATE）**：用於按鍵震動回饋，可於設定關閉。
 - **剪貼簿存取**：文字編輯面板的複製／貼上／剪貼簿功能需讀寫系統剪貼簿，僅於您主動操作時使用，內容不離開裝置。
 - **相簿存取**：僅於您主動點擊「選擇底圖」時，透過系統相簿選擇器挑選單張圖片，不會批次存取或掃描您的相簿。
+
+### 關於「完整體驗模式」
+HarmonyOS 會對所有第三方輸入法顯示是否啟用「完整體驗模式」的系統級提示（非本輸入法特有的行為）。系統未授予此模式時，會限制部分能力（例如按鍵震動）；開啟後這些功能才能正常運作。該提示顯示的「可能傳輸您輸入的內容」為系統對此模式的通用制式警語（所有第三方輸入法皆顯示相同文字），並非本輸入法會如此運作——本輸入法完全離線、未宣告任何網路權限，技術上不可能傳送任何資料。
 
 ### 外部連結
 主程式「哪裡找碼表？」與「支持開發者」提供的連結會開啟您裝置的瀏覽器前往第三方網站（如 GitHub、Ko-fi、綠界科技），本輸入法不經手您在該網站的任何行為（包括贊助／付款流程），該網站有其自身的隱私政策。
@@ -69,11 +73,15 @@ The following is stored only in the app's private storage on your device, never 
 - **Recently used emoji** (up to 24, local).
 - **Imported code tables / dictionaries**: shape-based code tables and the full Japanese dictionary you import yourself, stored locally for input only.
 - **Keyboard background image**: a photo you pick is copied locally for display only.
+- **Backup file**: a JSON file you export from "Backup & Restore" containing the same local data above, saved to a location you choose; the IME never uploads or shares it automatically, and only reads a file you actively pick when importing.
 
 ### Permissions
 - **Vibration (ohos.permission.VIBRATE)**: for key haptic feedback; can be turned off in settings.
 - **Clipboard access**: copy/paste/clipboard features read and write the system clipboard only when you actively trigger them; content never leaves the device.
 - **Photo access**: only triggered when you tap "Choose background" via the system photo picker for a single image; no bulk access or scanning of your photo library.
+
+### About "Full Experience Mode"
+HarmonyOS shows a system-level prompt asking whether to enable "Full Experience Mode" for all third-party input methods (not specific to this IME). When not granted, some capabilities (e.g. key vibration) are restricted; enabling it allows them to work normally. The prompt's warning that the app "may transmit anything you type" is HarmonyOS's standard boilerplate for this mode (shown identically for every third-party keyboard) — it does not describe what this IME actually does. As stated above, this IME is fully offline and declares no network permission, so it is technically incapable of transmitting any data.
 
 ### External links
 Links under "Where to find code tables" and "Support the developer" open your device browser to third-party sites (e.g. GitHub, Ko-fi, ECPay); the IME is not involved in anything you do there (including donation/payment flows), and those sites have their own privacy policies.
