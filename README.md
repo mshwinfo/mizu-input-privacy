@@ -10,6 +10,10 @@
 
 ## 下載檔案 Downloads
 - [`downloads/ja_words_full.txt`](downloads/ja_words_full.txt) — 完整版日文詞庫（16.2 萬讀音，生成自 JMdict，見主專案 `THIRD_PARTY_LICENSES.md`）。於 App 主程式「日文詞庫」下載並匯入即可使用。
+- [`downloads/table_wubi86.txt`](downloads/table_wubi86.txt) — 五筆 86 碼表（轉換版，7.6 萬編碼）。轉換自 [rime/rime-wubi](https://github.com/rime/rime-wubi)，LGPL-3.0 授權（見 [`downloads/LGPL-3.0.txt`](downloads/LGPL-3.0.txt)）。於 App 主程式「匯入五筆碼表」選擇此檔即可。
+- [`downloads/table_stroke.txt`](downloads/table_stroke.txt) — 筆畫碼表（轉換版，3.4 萬編碼，h/s/p/n/z 五筆畫）。轉換自 [rime/rime-stroke](https://github.com/rime/rime-stroke)，LGPL-3.0 授權。於 App 主程式「匯入筆畫碼表」選擇此檔即可。
+
+> 轉換版碼表已過濾一般輸入用不到的罕用漢字（CJK 擴充區、相容表意文字等），並統一為 App 的 `code=候選` 內部格式，檔案更小、匯入更快。轉換不更動任何編碼規則。
 
 ---
 
