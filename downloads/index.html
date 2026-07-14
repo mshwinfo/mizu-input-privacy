@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>謎之輸入法 mizu input — 下載 Downloads</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #666666;
+    --border: #e5e5e5;
+    --accent: #0a59f7;
+    --card: #f7f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181c;
+      --fg: #e8e8e8;
+      --muted: #9a9a9a;
+      --border: #2a2d33;
+      --accent: #6ea8ff;
+      --card: #1e2126;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, "PingFang TC", "Segoe UI", Roboto, sans-serif;
+    line-height: 1.7;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+  a { color: var(--accent); }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+  }
+  .card h2 { font-size: 1.1rem; margin: 0 0 6px; }
+  .card p { margin: 0 0 12px; font-size: 0.92rem; color: var(--muted); }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 999px;
+  }
+  .meta { font-size: 0.8rem; color: var(--muted); margin-top: 8px; }
+  .hint {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 28px 0;
+  }
+  .foot { margin-top: 40px; font-size: 0.85rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>謎之輸入法 mizu input</h1>
+  <p class="subtitle">碼表與詞庫下載 Downloads</p>
+
+  <div class="card" id="wubi">
+    <h2>五筆 86 碼表（轉換版）</h2>
+    <p>轉換自 <a href="https://github.com/rime/rime-wubi">rime/rime-wubi</a>，7.6 萬編碼。下載後於 App 主程式「匯入五筆碼表」選擇此檔。</p>
+    <a class="btn" href="table_wubi86.txt" download="table_wubi86.txt">⬇ 下載 table_wubi86.txt</a>
+    <div class="meta">約 0.9 MB ・ LGPL-3.0 授權</div>
+  </div>
+
+  <div class="card" id="stroke">
+    <h2>筆畫碼表（轉換版）</h2>
+    <p>轉換自 <a href="https://github.com/rime/rime-stroke">rime/rime-stroke</a>，3.4 萬編碼（h 橫 s 豎 p 撇 n 捺 z 折）。下載後於 App 主程式「匯入筆畫碼表」選擇此檔。</p>
+    <a class="btn" href="table_stroke.txt" download="table_stroke.txt">⬇ 下載 table_stroke.txt</a>
+    <div class="meta">約 0.6 MB ・ LGPL-3.0 授權</div>
+  </div>
+
+  <div class="card" id="ja">
+    <h2>日文完整版詞庫</h2>
+    <p>生成自 JMdict（EDRDG），16.2 萬讀音。下載後於 App 主程式「日文詞庫」匯入。</p>
+    <a class="btn" href="ja_words_full.txt" download="ja_words_full.txt">⬇ 下載 ja_words_full.txt</a>
+    <div class="meta">CC BY-SA 4.0（EDRDG Licence）</div>
+  </div>
+
+  <div class="hint">
+    小提示：下載完成後回到 App 點對應的「匯入」按鈕，在檔案選擇器<strong>左側進入「下載」資料夾</strong>即可找到檔案（搜尋功能可能因系統索引延遲而暫時找不到）。
+  </div>
+
+  <p class="foot">
+    轉換版碼表已過濾罕用漢字並統一為 App 內部 <code>code=候選</code> 格式，不更動任何編碼規則。
+    授權全文：<a href="LGPL-3.0.txt">LGPL-3.0.txt</a> ・
+    <a href="https://mshwinfo.github.io/mizu-input-privacy/">隱私政策</a> ・
+    <a href="https://github.com/mshwinfo/mizu-input-privacy/issues">問題回報 GitHub Issues</a>
+  </p>
+</div>
+</body>
+</html>
