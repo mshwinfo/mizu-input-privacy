@@ -25,7 +25,7 @@
 以下資料僅儲存在您裝置的應用程式私有空間，不會離開您的裝置，解除安裝 App 即一併移除：
 - **輸入偏好設定**：如震動／按鍵音開關、音量與強度、簡體輸出、模糊音、啟用的輸入法語言、鍵盤底圖等。
 - **使用者詞庫學習**：為提升選字準確度，本輸入法會在本機記錄您選過的字詞頻率（含中文與英文）。此資料僅存於本機，不上傳。
-- **剪貼簿歷史**：文字編輯面板的剪貼簿功能會在本機記錄最近複製的文字（上限 20 筆），僅供您快速貼上使用，不上傳；可於面板內清除。
+- **剪貼簿歷史（預設關閉）**：此功能預設為關閉；僅在您於鍵盤設定中主動開啟「剪貼簿歷史」後，才會在本機記錄最近複製的文字（上限 20 筆），供您快速貼上使用，不上傳；可於面板內清除，關閉後亦會一併清除既有記錄。未開啟時，本輸入法不會在背景讀取或記錄系統剪貼簿。
 - **最近使用的表情符號**：Emoji 面板會在本機記錄最近使用的表情（上限 24 筆）。
 - **匯入的碼表／詞庫**：您自行匯入的形碼碼表檔、日文完整版詞庫，僅存於本機供輸入使用。
 - **鍵盤底圖**：您從相簿選擇的鍵盤背景圖片，僅複製一份存於本機供顯示使用。
@@ -33,7 +33,7 @@
 
 ### 權限說明
 - **震動（ohos.permission.VIBRATE）**：用於按鍵震動回饋，可於設定關閉。
-- **剪貼簿存取**：文字編輯面板的複製／貼上／剪貼簿功能需讀寫系統剪貼簿，僅於您主動操作時使用，內容不離開裝置。
+- **剪貼簿存取**：複製／貼上僅於您主動操作時讀寫系統剪貼簿，內容不離開裝置。背景記錄剪貼簿歷史的功能預設關閉，僅在您主動開啟後才啟用。
 - **相簿存取**：僅於您主動點擊「選擇底圖」時，透過系統相簿選擇器挑選單張圖片，不會批次存取或掃描您的相簿。
 
 ### 關於「完整體驗模式」
@@ -69,7 +69,7 @@ mizu input ("the IME") respects and protects user privacy. The IME operates **fu
 The following is stored only in the app's private storage on your device, never leaves your device, and is removed when you uninstall the app:
 - **Input preferences** (haptics/sound toggles, volume/intensity, Simplified output, fuzzy phonetics, enabled input languages, keyboard background image, etc.).
 - **User dictionary learning**: selection frequencies (Chinese and English) recorded locally to improve candidate ordering. Local only; never uploaded.
-- **Clipboard history**: the text-editing panel keeps up to 20 recently copied items locally for quick paste; never uploaded; can be cleared in the panel.
+- **Clipboard history (off by default)**: disabled unless you turn on "Clipboard history" in the keyboard settings. Only then does it keep up to 20 recently copied items locally for quick paste; never uploaded; can be cleared in the panel and is cleared when you turn the feature off. While disabled, the IME does not read or record the system clipboard in the background.
 - **Recently used emoji** (up to 24, local).
 - **Imported code tables / dictionaries**: shape-based code tables and the full Japanese dictionary you import yourself, stored locally for input only.
 - **Keyboard background image**: a photo you pick is copied locally for display only.
@@ -77,7 +77,7 @@ The following is stored only in the app's private storage on your device, never 
 
 ### Permissions
 - **Vibration (ohos.permission.VIBRATE)**: for key haptic feedback; can be turned off in settings.
-- **Clipboard access**: copy/paste/clipboard features read and write the system clipboard only when you actively trigger them; content never leaves the device.
+- **Clipboard access**: copy/paste read and write the system clipboard only when you actively trigger them; content never leaves the device. Background clipboard-history recording is off by default and only runs after you enable it.
 - **Photo access**: only triggered when you tap "Choose background" via the system photo picker for a single image; no bulk access or scanning of your photo library.
 
 ### About "Full Experience Mode"
