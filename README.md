@@ -1,7 +1,7 @@
 # 隱私政策 Privacy Policy
 
 **謎之輸入法**
-最後更新日期：2026-07-17
+最後更新日期：2026-07-18
 
 本頁為謎之輸入法（mizu input，HarmonyOS）的公開隱私政策，供應用市場審核與使用者參閱。
 
@@ -45,7 +45,7 @@
 ### 權限說明
 - **震動（ohos.permission.VIBRATE）**：用於按鍵震動回饋，可於設定關閉。
 - **剪貼簿存取**：複製／貼上僅於您主動操作時讀寫系統剪貼簿，內容不離開裝置。背景記錄剪貼簿歷史的功能預設關閉，僅在您主動開啟後才啟用。
-- **相簿存取**：僅於您主動點擊「選擇底圖」時，透過系統相簿選擇器挑選單張圖片，不會批次存取或掃描您的相簿。
+- **相簿存取**：僅於您主動點擊「選擇底圖」時，透過系統相簿選擇器挑選單張圖片（可先選相簿目錄縮小範圍，方便相片多時尋找），不會批次讀取或掃描您的相片內容。
 
 ### 關於「完整體驗模式」
 HarmonyOS 會對所有第三方輸入法顯示是否啟用「完整體驗模式」的系統級提示（非本輸入法特有的行為）。系統未授予此模式時，會限制部分能力（例如按鍵震動）；開啟後這些功能才能正常運作。該提示顯示的「可能傳輸您輸入的內容」為系統對此模式的通用制式警語（所有第三方輸入法皆顯示相同文字），並非本輸入法會如此運作——本輸入法完全離線、未宣告任何網路權限，技術上不可能傳送任何資料。
@@ -89,7 +89,7 @@ The following is stored only in the app's private storage on your device, never 
 ### Permissions
 - **Vibration (ohos.permission.VIBRATE)**: for key haptic feedback; can be turned off in settings.
 - **Clipboard access**: copy/paste read and write the system clipboard only when you actively trigger them; content never leaves the device. Background clipboard-history recording is off by default and only runs after you enable it.
-- **Photo access**: only triggered when you tap "Choose background" via the system photo picker for a single image; no bulk access or scanning of your photo library.
+- **Photo access**: only triggered when you tap "Choose background" via the system photo picker (you may first pick an album/folder to narrow it down, which helps when you have many photos) for a single image; no bulk access or scanning of your photo content.
 
 ### About "Full Experience Mode"
 HarmonyOS shows a system-level prompt asking whether to enable "Full Experience Mode" for all third-party input methods (not specific to this IME). When not granted, some capabilities (e.g. key vibration) are restricted; enabling it allows them to work normally. The prompt's warning that the app "may transmit anything you type" is HarmonyOS's standard boilerplate for this mode (shown identically for every third-party keyboard) — it does not describe what this IME actually does. As stated above, this IME is fully offline and declares no network permission, so it is technically incapable of transmitting any data.
