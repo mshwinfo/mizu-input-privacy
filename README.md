@@ -1,7 +1,7 @@
 # 隱私政策 Privacy Policy
 
 **謎之輸入法**
-最後更新日期：2026-07-18
+最後更新日期：2026-07-19
 
 本頁為謎之輸入法（mizu input，HarmonyOS）的公開隱私政策，供應用市場審核與使用者參閱。
 
@@ -40,7 +40,6 @@
 - **最近使用的表情符號**：Emoji 面板會在本機記錄最近使用的表情（上限 24 筆）。
 - **匯入的碼表／詞庫**：您自行匯入的形碼碼表檔、日文完整版詞庫，僅存於本機供輸入使用。
 - **鍵盤底圖**：您從相簿選擇的鍵盤背景圖片，僅複製一份存於本機供顯示使用。
-- **備份檔案**：您於「備份與還原」主動匯出的設定與學習資料備份檔（JSON），內容與上述本機資料相同，儲存於您指定的裝置位置；本輸入法不會自動上傳或分享此檔案，匯入時也僅在您主動選擇檔案後才讀取。
 
 ### 權限說明
 - **震動（ohos.permission.VIBRATE）**：用於按鍵震動回饋，可於設定關閉。
@@ -84,7 +83,6 @@ The following is stored only in the app's private storage on your device, never 
 - **Recently used emoji** (up to 24, local).
 - **Imported code tables / dictionaries**: shape-based code tables and the full Japanese dictionary you import yourself, stored locally for input only.
 - **Keyboard background image**: a photo you pick is copied locally for display only.
-- **Backup file**: a JSON file you export from "Backup & Restore" containing the same local data above, saved to a location you choose; the IME never uploads or shares it automatically, and only reads a file you actively pick when importing.
 
 ### Permissions
 - **Vibration (ohos.permission.VIBRATE)**: for key haptic feedback; can be turned off in settings.
