@@ -13,7 +13,7 @@
 > **下載頁 Download page**：https://mshwinfo.github.io/mizu-input-privacy/downloads/
 > （建議由此頁下載——點按鈕直接下載檔案，不會在瀏覽器中開啟內容。）
 
-- [`downloads/ja_words_full.txt`](downloads/ja_words_full.txt) — 完整版日文詞庫（16.2 萬讀音，生成自 JMdict，見主專案 `THIRD_PARTY_LICENSES.md`）。於 App 主程式「日文詞庫」下載並匯入即可使用。
+- [`downloads/ja_words_full.txt`](downloads/ja_words_full.txt) — 完整版日文詞庫（22.5 萬讀音，生成自 JMdict 與 JMnedict，皆 EDRDG CC BY-SA 4.0，見主專案 `THIRD_PARTY_LICENSES.md`）。含全部日文姓氏（斉藤／斎藤／齋藤等異體字與罕見姓氏），姓氏排在一般詞彙之後不干擾日常輸入。於 App 主程式「日文詞庫」下載並匯入即可使用；**先前匯入過舊版者需重新匯入才會有姓氏**。
 - [`downloads/table_wubi86.txt`](downloads/table_wubi86.txt) — 五筆 86 碼表（轉換版，7.6 萬編碼）。轉換自 [rime/rime-wubi](https://github.com/rime/rime-wubi)，LGPL-3.0 授權（見 [`downloads/LGPL-3.0.txt`](downloads/LGPL-3.0.txt)）。於 App 主程式「匯入五筆碼表」選擇此檔即可。
 - [`downloads/table_stroke.txt`](downloads/table_stroke.txt) — 筆畫碼表（轉換版，3.4 萬編碼，h/s/p/n/z 五筆畫）。轉換自 [rime/rime-stroke](https://github.com/rime/rime-stroke)，LGPL-3.0 授權。於 App 主程式「匯入筆畫碼表」選擇此檔即可。
 
