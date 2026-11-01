@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>謎之輸入法 — 常見問題 Q&amp;A</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #666666;
+    --border: #e5e5e5;
+    --accent: #0a59f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181c;
+      --fg: #e8e8e8;
+      --muted: #9a9a9a;
+      --border: #2a2d33;
+      --accent: #6ea8ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, "PingFang TC", "Segoe UI", Roboto, sans-serif;
+    line-height: 1.7;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 4px; }
+  .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+  h2 {
+    font-size: 1.15rem;
+    margin-top: 2.2em;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 { font-size: 1.35rem; margin-top: 2.6em; }
+  ul { padding-left: 1.3em; }
+  li { margin-bottom: 0.5em; }
+  a { color: var(--accent); }
+  hr { border: none; border-top: 1px solid var(--border); margin: 3em 0; }
+  .lang-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin-bottom: 1em;
+  }
+
+  .nav { margin: 0 0 24px; font-size: 0.95rem; }
+  .nav a, .nav span { margin-right: 14px; }
+  .nav span { font-weight: 600; }
+  blockquote { margin: 0 0 24px; padding: 8px 14px; border-left: 3px solid var(--border); color: var(--muted); }
+  .q { font-weight: 600; margin-top: 1.6em; }
+  ol { padding-left: 1.3em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>謎之輸入法</h1>
+  <p class="nav"><a href="./">隱私政策</a><span>常見問題 Q&amp;A</span></p>
+  <blockquote>適用 1.7.1 起（HarmonyOS）。遇到問題先找這裡；找不到的話，到社團告訴我們，附上手機型號、系統版本、App 版本（主程式「贊助」區最下面那行）會更快查到。</blockquote>
+  <h2>一、安裝與啟用</h2>
+  <p class="q">Q1：裝好了，可是鍵盤裡找不到謎之輸入法？</p>
+  <p>A：安裝完還要手動啟用一次：</p>
+  <ol>
+    <li>開「設定」→「系統」→「鍵盤與輸入法」</li>
+    <li>進「管理輸入法」，把「謎之輸入法」打開</li>
+    <li>在任何輸入框叫出鍵盤，切換到謎之輸入法（或設為預設輸入法）</li>
+  </ol>
+  <p>主程式首頁的「前往系統設定」可以直接跳過去。</p>
+  <p class="q">Q2：系統跳出「完整體驗模式」，還寫「可能傳輸您輸入的內容」，這安全嗎？</p>
+  <p>A：這是 HarmonyOS 對<strong>所有第三方輸入法</strong>顯示的同一段制式警語，不是我們特別寫的。謎之輸入法打字完全離線，連網路權限都沒有申請，技術上不可能把你打的字傳出去。</p>
+  <p>不開也能打字，但系統會限制部分能力：<strong>按鍵震動</strong>、<strong>語音輸入</strong>都需要開啟這個模式。</p>
+  <p class="q">Q3：按鍵沒有震動？</p>
+  <p>A：依序檢查：</p>
+  <ol>
+    <li>有沒有開「完整體驗模式」（見 Q2）</li>
+    <li>鍵盤 ⚙ 裡的震動有沒有開、強度是不是調到最低</li>
+    <li>手機本身是不是在靜音／勿擾，或系統設定裡關掉了觸感回饋</li>
+  </ol>
+  <p class="q">Q4：一直跳回系統輸入法／小藝輸入法？</p>
+  <p>A：到「管理輸入法」把謎之輸入法設為<strong>預設輸入法</strong>。部分 App（例如銀行、密碼欄）會強制用系統安全鍵盤，這是系統的保護機制，無法改變。</p>
+  <h2>二、打不出字、某個 App 不能用</h2>
+  <p class="q">Q5：選完字送出，輸入框卻什麼都沒有？</p>
+  <p>A：這通常是<strong>輸入框和鍵盤的連線斷了</strong>——例如聊天 App 切換聊天室、重建輸入框時，系統沒有把新的輸入框交給鍵盤。這是系統與 App 之間的時序問題，輸入法沒辦法讓它不發生，但 1.7.1 起不會再讓字默默消失：</p>
+  <ul>
+    <li>候選列最前面會出現紅色「⚠ N字沒送出・重送」</li>
+    <li>先<strong>點一下輸入框</strong>讓系統重新連上，再點「重送」就會補上</li>
+    <li>不要了就<strong>長按</strong>它丟掉（只顯示字數，不會顯示內容）</li>
+  </ul>
+  <p>如果常常發生，請截圖鍵盤上的診斷資訊回報給我們。</p>
+  <p class="q">Q6：在某一個 App 裡打不出字，其他 App 都正常？</p>
+  <p>A：先試：</p>
+  <ol>
+    <li>點一下輸入框外面再點回來，讓輸入框重新取得焦點</li>
+    <li>把鍵盤收起再叫出來</li>
+    <li>把那個 App 完全關掉重開</li>
+  </ol>
+  <p>還是不行的話，請告訴我們是哪個 App、哪個輸入框（聊天框、搜尋列…），我們再查。</p>
+  <p class="q">Q7：複製之後貼上沒有東西？</p>
+  <p>A：貼上是由系統剪貼簿處理的，輸入法只是幫你按下「貼上」。新版 HarmonyOS 對剪貼簿讀取有隱私限制（有些情況要你在系統提示裡允許），所以若用系統內建鍵盤也貼不出來，就是系統端的問題。</p>
+  <p>另外，鍵盤的「剪貼簿歷史」預設是<strong>關閉</strong>的；開了以後，部分系統版本仍會限制輸入法讀到新內容，這時歷史記不到新東西，但不影響一般的貼上。</p>
+  <h2>三、選字與準確度</h2>
+  <p class="q">Q8：整句選字選錯了，怎麼改？</p>
+  <p>A：用候選列旁的 ◀ ▶ 把焦點移到錯的那個字（或那個詞），單獨換掉它，其他字不動。改過的字和前後文都會記住，下次打同一句就會直接選對。</p>
+  <p class="q">Q9：不打聲調可以嗎？</p>
+  <p>A：可以，直接連打注音就好，引擎會用前後文猜。打聲調會更準，尤其是短句或單字。</p>
+  <p class="q">Q10：會越用越準嗎？會記住我常打的詞嗎？</p>
+  <p>A：會，有三種學習，全部只存在你的手機：</p>
+  <ul>
+    <li>選過的字詞頻率（含中文與英文）</li>
+    <li>你改過的整句（Q8）</li>
+    <li>你送出的句子裡「哪個詞後面常接哪個詞」（只記詞與詞的搭配次數，<strong>不保存整句原文</strong>）</li>
+  </ul>
+  <p>最後一項可在鍵盤 ⚙「從送出的句子學習」關掉。</p>
+  <p class="q">Q11：學錯了，想重來？</p>
+  <p>A：主程式「清除選字記憶」會把上面三種學習（連同 Email／號碼記憶）全部清掉，無法復原。建議先按「匯出備份」，之後想要回來還能匯入（1.7.2 起清除前會先問你要不要備份）。</p>
+  <p class="q">Q12：明明按對鍵，卻被改成別的字？／我按到隔壁鍵它幫我救回來了，這是什麼？</p>
+  <p>A：這是糾錯功能，鍵盤 ⚙ 裡有三個開關，可以分別關掉：</p>
+  <ul>
+    <li><strong>智能糾錯</strong>：按到隔壁鍵、漏打、多打、顛倒相鄰音節，用前後文救回來</li>
+    <li><strong>跨類鄰鍵糾錯</strong>：聲調鍵按成旁邊的注音（例如 ˇ 按成 ㄍ）也能救</li>
+    <li><strong>點擊位置糾錯</strong>：點在按鍵邊緣時，參考手指位置判斷是不是想按隔壁那顆</li>
+  </ul>
+  <p>如果你覺得它「太聰明」常改錯，先關「點擊位置糾錯」試試。</p>
+  <p class="q">Q13：模糊音是什麼？我分不清 ㄓ／ㄗ、ㄣ／ㄥ 怎麼辦？</p>
+  <p>A：鍵盤 ⚙ 打開「模糊音」，平翹舌（ㄓㄔㄕ／ㄗㄘㄙ）、前後鼻音（ㄣ／ㄥ）、ㄋ／ㄌ 不分的都能打出正確的字。</p>
+  <h2>四、其他輸入法</h2>
+  <p class="q">Q14：倉頡、大易、五筆、筆畫怎麼沒有字？</p>
+  <p>A：形碼的碼表有版權問題，App 不內建，需要你在主程式「匯入碼表」自行匯入合法的碼表檔（App 只負責轉換格式）。主程式有提供開源碼表庫與五筆、筆畫轉換版的下載連結。沒匯入之前，這些輸入法預設是關閉的，這是正常的。</p>
+  <p class="q">Q15：可以用嘸蝦米、大新倉頡等其他碼表嗎？</p>
+  <p>A：可以，用「匯入自訂碼表1／2」匯入 .cin 檔，還可以自己命名。碼表裡有字根定義的話，鍵面會自動顯示字根。</p>
+  <p class="q">Q16：語音輸入沒反應？</p>
+  <p>A：語音輸入需要三個條件，缺一個都不行：</p>
+  <ol>
+    <li>麥克風權限</li>
+    <li>網路連線</li>
+    <li>「完整體驗模式」（Q2）</li>
+  </ol>
+  <p>語音是由系統的語音辨識服務上傳雲端辨識，只有你按麥克風鍵的時候才會用到；不用就完全不碰麥克風和網路。目前支援中文和英文。</p>
+  <p class="q">Q17：日文打不出罕見姓氏？</p>
+  <p>A：內建詞庫已含常見姓氏與異體字；要更完整的話，主程式「日文詞庫」可以下載並匯入完整版（約 22 萬個讀音）。</p>
+  <h2>五、隱私、備份與換機</h2>
+  <p class="q">Q18：謎之輸入法會上傳我打的字嗎？</p>
+  <p>A：不會。打字完全離線，沒有帳號、沒有廣告、沒有分析 SDK，也沒有申請網路權限。唯一會連網的是<strong>你主動按下麥克風鍵</strong>時的語音輸入（Q16）。完整說明見<a href="https://mshwinfo.github.io/mizu-input-privacy/" target="_blank" rel="noopener">隱私政策</a>。</p>
+  <p class="q">Q19：換手機或重裝，學到的東西會不見嗎？</p>
+  <p>A：會，因為資料只存在手機裡，解除安裝就一起刪除了。換機前請在主程式按「<strong>匯出備份</strong>」，到新手機再「<strong>匯入備份</strong>」，鍵盤設定、選字與聯想學習、自訂短語都會還原。匯出前請先叫出鍵盤打幾個字，讓鍵盤把最新資料同步給主程式，備份才會完整。匯入的碼表檔建議自己另外保留一份。系統沒有讓 App 在被移除前提醒你的機制，所以請養成定期備份的習慣。</p>
+  <p class="q">Q20：「記住 Email／號碼」安全嗎？</p>
+  <p>A：預設關閉，要你自己打開才會記；只存在本機，密碼欄和驗證碼欄一律不記。</p>
+  <h2>六、裝置</h2>
+  <p class="q">Q21：折疊機可以用嗎？</p>
+  <p>A：可以。展開時鍵盤會自動避開橫向折痕，按鍵不會被鉸鏈切到。三摺疊、Pura X 外螢幕、平板與鴻蒙 PC 我們還沒有實機可以測，如果你在這些裝置上遇到問題，非常歡迎截圖回報。</p>
+  <p class="q">Q22：可以接實體鍵盤嗎？</p>
+  <p>A：可以（實驗性）。注音依大千鍵位直接打，數字鍵選字；用實體鍵盤時螢幕鍵盤會自動收起，只留一行候選字。</p>
+  <h2>還是沒解決？</h2>
+  <p>到社團告訴我們，請附上：</p>
+  <ul>
+    <li>手機型號、HarmonyOS 版本</li>
+    <li>謎之輸入法版本（主程式「贊助」區最下面那行，例如 1.7.1）</li>
+    <li>在哪個 App、做了什麼、看到什麼（有截圖或錄影最好）</li>
+  </ul>
+</div>
+</body>
+</html>
